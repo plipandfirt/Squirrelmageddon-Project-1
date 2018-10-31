@@ -50,9 +50,12 @@ function performMarvelSearch(character) {
 
         // TO-DO:  Attach details from response to the div element here
         var name = response.data.results[0].name;
+        var thumbnail = response.data.results[0].thumbnail.path;
+        thumbnail += "." + response.data.results[0].thumbnail.extension;
 
         // Replace the displayed card with the new movie
         $("#marvel").empty();
         $("#marvel").append($("<p>").text(name));
+        $("#marvel").append($("<img>").attr("src",thumbnail).attr("height","150px"));
     });
 }
