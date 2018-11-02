@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Hot or Not: Marvel vs DC </title>
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="assets/images/project1.png" type="image/x-icon" /> -->
+
+    <!-- External CSS Stylesheets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <!-- Our application Javascript -->
+    <script src="assets/javascript/md5.js"></script>
+    <script src="assets/javascript/marvel.js"></script>
+    <script src="assets/javascript/firebase.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- title row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header text-center" style="background-color: rgb(70, 70, 180); color: white">Characture
+                        Selector</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- selector row -->
+        <div class="row">
+            <div class="col-md-6 bg-light">
+                Put selector list here
+            </div>
+            <div class="col-md-6 bg-secondary text-white border">
+                <div id="char-img" style="height:150px;">
+                    Bio pic
+                </div>
+
+                <div id="tribe-selector">
+                    <form>
+                        <input type="radio" name="tribe" value="hero">Hero<br>
+                        <input type="radio" name="tribe" value="villain">Villain<br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        // Test Call
+        // <!--performMarvelSearch("Magneto"); -->
+    </script>
+
+</body>
+
+</html>
