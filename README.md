@@ -1,5 +1,7 @@
 # Squirrelmageddon-Project-1
 
+Chris's Edit is in the House -- Mikes masterful tutorial on Git Pull
+
 Hot or Not Project Proposal
 Team Members: Squirrelmaggedon:  Jeff Bond, Chris Gauthier, Laurie Anderson & Mike Galarneau
 
