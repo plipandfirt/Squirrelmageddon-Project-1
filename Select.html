@@ -40,7 +40,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card mb-4">
-                    <div class="card-header text-center" style="background-color: rgb(70, 70, 180); color: white">Characture
+                    <div class="card-header text-center" style="background-color: rgb(70, 70, 180); color: white">Character
                         Selector</div>
                 </div>
             </div>
@@ -49,7 +49,17 @@
         <!-- selector row -->
         <div class="row">
             <div class="col-md-6 bg-light">
-                Put selector list here
+                <div class="card mb-4">
+                    <div class="card-header" style="background-color: rgb(70, 70, 180); color: white">Pick your
+                        <span id="hero-villian-tag">champion</span>:</div>
+                    <ul class="list-group" id="character-tbl">
+                        <li class="list-group-item">Iron Man</li>
+                        <li class="list-group-item active">Hulk</li>
+                        <li class="list-group-item">Spider-Man</li>
+                        <li class="list-group-item">Black Widow</li>
+                        <li class="list-group-item">Rogue</li>
+                    </ul>
+                </div>
             </div>
             <div class="col-md-6 bg-secondary text-white border">
                 <div id="char-img" style="height:150px;">
@@ -72,7 +82,7 @@
 
     <script type="text/javascript">
         // Test Calls
-        performMarvelSearch("Hulk"); 
+        performMarvelSearch("Hulk");
     </script>
 
 </body>
