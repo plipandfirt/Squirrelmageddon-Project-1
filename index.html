@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Hot or Not:  Marvel vs DC </title>
+    <title>Hot or Not: Marvel vs DC </title>
 
     <!-- Favicon -->
     <!-- <link rel="icon" href="assets/images/project1.png" type="image/x-icon" /> -->
@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -29,20 +29,63 @@
     <script src="assets/javascript/md5.js"></script>
     <script src="assets/javascript/marvel.js"></script>
     <script src="assets/javascript/firebase.js"></script>
-    <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/login.js"></script>
+
+    <!-- Added css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
 <body>
-    <div id="marvel">
-        Superman
-    </div>
 
-    <script type="text/javascript">
-        // Test Call
-        performMarvelSearch("Magneto");
-    </script>
+    <div class="container" id="login">
 
+            <!-- display game title -->
+            <div class="row">
+                <div class="col-lg-12" id="title">
+                    <!-- <h1 class="text-primary">Hot or Not: Superhero Edition!</h1>-->
+                    <img src="marvel-title3.png" class="img-fluid img-rounded mx-auto d-block" alt="Game Title">
+                </div>
+            </div>
+    
+            <!-- display remainder of login board in two columns-->
+            <div class="row">
+    
+                <!-- instructions and login in column 1 and some imagery in column 2-->
+                <div class="col-md-6" id="loginboard">
+    
+                    <!-- display the game instructions -->
+                    <div id="instructions">
+                        <h2>Hot or Not Superhero Edition is a battle of chance. Enter your player name
+                            so we can track your progress, click Submit and let's get started...</h2>
+                            <br>
+                    </div>
+    
+                    <!-- get the player name -->
+                    <div id="player">
+                        <input type="text" id="loginName" placeholder="Enter your login name!">
+                        <button type="submit" id="submitButton" class="btn btn-danger">Submit</button>
+                    </div>
+    
+                </div>
+    
+                <!-- display images -->
+                <div class="col-md-6" id="loginimage">
+                    <img src="marvel-image.png" class="img-fluid img-rounded" alt="Pic of Marvel Characters">
+                </div>
+    
+            </div>
+    
+            <!-- display game footer -->
+            <div class="row">
+                <div class="col-lg-12" id="gamefooter">
+                    <h2>This game is developed for educational purposes only and is not
+                        intended to be used for monetary gain. All Marvel characters referenced within the
+                        game are property of the Walt Disney Company. </h2>
+                </div>
+            </div>
+    
+        </div>
 </body>
 
 </html>
