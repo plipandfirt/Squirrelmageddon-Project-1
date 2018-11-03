@@ -75,8 +75,10 @@ $(document).ready(function () {
 
     $(".tribe-btn").on("click", function (event) {
 
+        event.preventDefault();
+
         // // Get the choice from the button selected
-        // var choice = $(this).attr("data-tribe");
+        var choice = $(this).attr("data-tribe");
 
         // Log our choice
         console.log("Tribe choice event() - ", choice);
