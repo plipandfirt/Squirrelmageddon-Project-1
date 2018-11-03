@@ -17,64 +17,64 @@ var players = [];
 
 // 'A' team hero characters loaded from firebase should be pushed here  - array of Character {} objects
 var heroes = [ 
-    "Iron Man",
     "Black Panther",
-    "Spider-Man",
     "Black Widow",
-    "Rogue",
-    "Wolverine",
-    "Thor",
-    "Daredevil",
-    "Hulk",
-    "Deadpool",
     "Captain America",
-    "Doctor Strange",
-    "Nick Fury",
-    "Hawkeye ", 
-    "Silver Surfer",
-    "Punisher",
-    "Star-Lord", // need real name for Marvel API
-    "Groot",
-    "Gamora",
-    "Rocket Raccoon",
-    "Drax",
-    "Howard the Duck",
-    "Super Nova",
-    "Professor X",
     "Cyclops",
-    "Mr. Fantastic",
+    "Daredevil",
+    "Deadpool",
+    "Doctor Strange",
+    "Drax",
+    "Gamora",
+    "Groot",
+    "Hawkeye ", 
+    "Howard the Duck",
+    "Hulk",
     "Human Torch",
+    "Invisible Woman",
+    "Iron Man",
+    "Mr. Fantastic",
+    "Nick Fury",
+    "Professor X",
+    "Punisher",
+    "Rocket Raccoon",
+    "Rogue",
+    "Silver Surfer",
+    "Spider-Man",
+    "Star-Lord", // need real name for Marvel API
+    "Supernova",  // need working name for marvel API
     "Thing",
-    "Invisible Woman"
+    "Thor",
+    "Wolverine"
     ];   
 
 // 'B' team villan characters loaded from firebase should be pushed here - array of Character {} objects
 var villains = [
-    "Venom",  // need real name
-    "Magneto",
-    "Loki",
-    "Thanos",
-    "Mystique",
-    "Ultron",
-    "Lady Deathstrike",
-    "Red Skull",
-    "Viper", // need real name
-    "Juggernaut",
-    "Nebula",
-    "Ronan",
-    "Ego",
-    "Yondu",// need real name
-    "The Collector",
-    "Toad",
     "Apocalypse",
-    "Galactus",
-    "Kingpin",
-    "Doctor Octopus",
     "Doctor Doom",
-    "Norman Osborn",
-    "Kang",
+    "Doctor Octopus",
     "Dormammu",
-    "Mandarin"
+    "Ego",
+    "Galactus",
+    "Juggernaut",
+    "Kang",
+    "Kingpin",
+    "Lady Deathstrike",
+    "Loki",
+    "Magneto",
+    "Mandarin",
+    "Mystique",
+    "Nebula",
+    "Norman Osborn",
+    "Red Skull",
+    "Ronan",
+    "Thanos",
+    "Ultron",
+    "Venom",  // need real name
+    "Viper", // need real name
+    "Yondu",// need real name
+    "The Collector", // need working name
+    "Toad"
     ];
 
 // rounds[] - array of round {} objects,  keeps track of results during / between rounds, loads from firebase events
