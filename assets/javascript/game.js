@@ -17,6 +17,7 @@ var players = [];
 
 // 'A' team hero characters loaded from firebase should be pushed here  - array of Character {} objects
 var heroes = [ 
+    "Avengers",
     "Black Panther",
     "Black Widow",
     "Captain America",
@@ -27,6 +28,7 @@ var heroes = [
     "Drax",
     "Gamora",
     "Groot",
+    "Guardians of the Galaxy",
     "Hawkeye ", 
     "Howard the Duck",
     "Hulk",
@@ -35,22 +37,23 @@ var heroes = [
     "Iron Man",
     "Mr. Fantastic",
     "Nick Fury",
+    "Nova",
     "Professor X",
     "Punisher",
     "Rocket Raccoon",
     "Rogue",
     "Silver Surfer",
     "Spider-Man",
-    "Star-Lord", // need real name for Marvel API
-    "Supernova",  // need working name for marvel API
+    "Star-Lord (Peter Quill)",
     "Thing",
     "Thor",
-    "Wolverine"
+    "Wolverine",
     ];   
 
 // 'B' team villan characters loaded from firebase should be pushed here - array of Character {} objects
 var villains = [
     "Apocalypse",
+    "Bucky",
     "Doctor Doom",
     "Doctor Octopus",
     "Dormammu",
@@ -61,20 +64,23 @@ var villains = [
     "Kingpin",
     "Lady Deathstrike",
     "Loki",
+    "Maestro",
     "Magneto",
     "Mandarin",
     "Mystique",
     "Nebula",
     "Norman Osborn",
+    "Omega Red",
+    "Onslaught",
     "Red Skull",
     "Ronan",
+    "Sabretooth",
+    "Sentinel",
     "Thanos",
+    "The Fury",
+    "Toad",
     "Ultron",
-    "Venom",  // need real name
-    "Viper", // need real name
-    "Yondu",// need real name
-    "The Collector", // need working name
-    "Toad"
+    "Venom (Flash Thompson)" 
     ];
 
 // rounds[] - array of round {} objects,  keeps track of results during / between rounds, loads from firebase events
