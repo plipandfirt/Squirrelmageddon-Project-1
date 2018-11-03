@@ -32,26 +32,30 @@
     <script src="assets/javascript/dc.js"></script>
     <script src="assets/javascript/game.js"></script>
 
+    <!-- Added css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 
 <body>
-    <div class="container-fluid">
-        <!-- title row -->
+    <div class="container">
+
+        <!-- display game title -->
         <div class="row">
-            <div class="col-md-12">
-                <div class="card mb-4">
-                    <div class="card-header text-center" style="background-color: rgb(70, 70, 180); color: white">Character
-                        Selector</div>
-                </div>
+            <div class="col-lg-12" id="title">
+                <!-- <h1 class="text-primary">Hot or Not: Superhero Edition!</h1>-->
+                <img src="assets/images/marvel-title3.png" class="img-fluid img-rounded mx-auto d-block" alt="Game Title">
             </div>
         </div>
 
         <!-- selector row -->
         <div class="row">
-            <div class="col-md-6 bg-light">
-                <div class="card mb-4">
-                    <div class="card-header" style="background-color: rgb(70, 70, 180); color: white">Pick your
-                        <span id="hero-villian-tag">champion</span>:</div>
+            <div class="col-lg-6 text-center">
+                <div class="row" id="loginSelect">
+                    <h1>Pick your <span id="hero-villian-tag"></span> Champion</h1>
+                </div>
+
+                <div class="row" id="loginSelectList">
                     <ul class="list-group" id="character-tbl">
                         <li class="list-group-item">Iron Man</li>
                         <li class="list-group-item active">Hulk</li>
@@ -60,9 +64,12 @@
                         <li class="list-group-item">Rogue</li>
                     </ul>
                 </div>
+
             </div>
-            <div class="col-md-6 bg-secondary text-white border">
-                <div id="char-img" style="height:150px;">
+
+            <!-- </div> -->
+            <div class="col-lg-6 bg-secondary text-red border-warning" id="loginTribe">
+                <div id="char-img">
                     Bio pic
                 </div>
 

@@ -41,6 +41,32 @@
     object-fit: cover;
 }
 
+#loginSelect {
+    padding: 1%;
+    border: solid;
+    border-color: red;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-width: 1px;
+    border-radius: 15px;
+    margin: 0.5% 0% 0.5% 0%;
+}
+
+#loginSelectList {
+    padding: 1%;
+    border: solid;
+    border-color: red;
+    border-width: 1px;
+    border-radius: 15px;
+    margin: 0.5% 0% 0.5% 0%;
+}
+#loginTribe {
+    padding: 1%;
+    margin: 0.5% 0% 0.5% 0%;
+    border-color: red;s
+    object-fit: cover;
+}
 #gameFooter h2 {
     font-size: 1vw;
 }
