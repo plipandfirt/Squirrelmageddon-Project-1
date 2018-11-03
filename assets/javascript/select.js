@@ -36,6 +36,12 @@ $(document).ready(function () {
     // setTribeChoice() - sets the hero or villain choice from the active player
     //-----------------------------
     function setTribeChoice(choice) {
+
+        // Update the title bar to reflect the tribe choice
+        var tagElem = $("#hero-villian-tag");
+        tagElem.empty(); 
+        tagElem.text(choice);
+
         tribe = choice;
     }
 
@@ -77,7 +83,7 @@ $(document).ready(function () {
 
         event.preventDefault();
 
-        // // Get the choice from the button selected
+        // Get the choice from the button selected
         var choice = $(this).attr("data-tribe");
 
         // Log our choice
