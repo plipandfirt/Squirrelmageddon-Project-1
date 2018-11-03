@@ -17,7 +17,7 @@
     font-size: 3vw;
 }
 
-#loginboard {
+#loginBoard {
     padding: 1%;
     border: solid;
     border-color: red;
@@ -35,13 +35,13 @@
 
 }
 
-#loginimage {
+#loginImage {
     padding: 1%;
     margin: 0.5% 0% 0.5% 0%;
     object-fit: cover;
 }
 
-#gamefooter h2 {
+#gameFooter h2 {
     font-size: 1vw;
 }
 
@@ -59,7 +59,7 @@
         font-size: 2vw;
     }
 
-    #gamefooter h2 {
+    #gameFooter h2 {
         font-size: 1vw;
     }
 }
@@ -72,7 +72,7 @@
     #instructions h2 {
         font-size: 2vw;
     }
-    #gamefooter h2 {
+    #gameFooter h2 {
         font-size: 2vw;
     }
 }
@@ -87,7 +87,7 @@
         font-size: 2vw;
     }
 
-    #gamefooter h2 {
+    #gameFooter h2 {
         font-size: 2vw;
     }
 }  
