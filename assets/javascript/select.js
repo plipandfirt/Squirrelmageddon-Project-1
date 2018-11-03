@@ -39,7 +39,6 @@ $(document).ready(function () {
 
         // Update the title bar to reflect the tribe choice
         var tagElem = $("#hero-villian-tag");
-        tagElem.empty(); 
         tagElem.text(choice);
 
         tribe = choice;
@@ -55,7 +54,9 @@ $(document).ready(function () {
             (i < heroes.length); i++) {
             var li = $("<li>");
             $(li).addClass("list-group-item");
+            $(li).addClass("character-choice");
             $(li).text(heroes[i]);
+            $(li).attr("data-name",heroes[i]);
             listElem.append(li)
         }
     }
@@ -70,7 +71,9 @@ $(document).ready(function () {
             (i < villains.length); i++) {
             var li = $("<li>");
             $(li).addClass("list-group-item");
+            $(li).addClass("character-choice");
             $(li).text(villains[i]);
+            $(li).attr("data-name",villains[i]);
             listElem.append(li)
         }
     }
@@ -94,6 +97,17 @@ $(document).ready(function () {
 
         // Refresh the list
         updateCharacterList();
+    });
+
+    $(document).on("click", ".character-choice", function(event) {
+        event.preventDefault();
+
+        // Get the choice from the button selected
+        var choice = $(this).attr("data-name");
+        console.log("character-choice event() - ", choice);
+
+        // Update the biography pic & data
+        performMarvelSearch(choice);
     });
 
     /* Update the screen with the latest */

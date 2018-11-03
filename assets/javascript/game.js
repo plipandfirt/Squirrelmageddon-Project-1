@@ -27,30 +27,30 @@ var heroes = [
     "Daredevil",
     "Hulk",
     "Deadpool",
-    "Captian America",
+    "Captain America",
     "Doctor Strange",
     "Nick Fury",
-    "Clint ",
+    "Hawkeye ", 
     "Silver Surfer",
-    "Punsiher",
-    "Star-Lord",
+    "Punisher",
+    "Star-Lord", // need real name for Marvel API
     "Groot",
     "Gamora",
-    "Rocket Raccon",
-    "Drax the Destroyer",
+    "Rocket Raccoon",
+    "Drax",
     "Howard the Duck",
-    "Supernova",
+    "Super Nova",
     "Professor X",
     "Cyclops",
-    "Mister Fantastic",
+    "Mr. Fantastic",
     "Human Torch",
     "Thing",
-    "Invisible Girl"
+    "Invisible Woman"
     ];   
 
 // 'B' team villan characters loaded from firebase should be pushed here - array of Character {} objects
 var villains = [
-    "Venom",
+    "Venom",  // need real name
     "Magneto",
     "Loki",
     "Thanos",
@@ -58,13 +58,13 @@ var villains = [
     "Ultron",
     "Lady Deathstrike",
     "Red Skull",
-    "Viper",
+    "Viper", // need real name
     "Juggernaut",
     "Nebula",
     "Ronan",
     "Ego",
-    "Yondu",
-    "Collector",
+    "Yondu",// need real name
+    "The Collector",
     "Toad",
     "Apocalypse",
     "Galactus",
