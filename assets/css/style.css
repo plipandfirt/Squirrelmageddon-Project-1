@@ -1,1 +1,93 @@
-/* just because we need to try */
+/* style page for Hot or Not Supuerhero Edition! */
+
+.container {
+    width: 100%;
+}
+
+#title {
+    padding: 1%;
+    margin: 0.5% 0% 0.5% 0%;
+    object-fit: cover;
+    align-content: center;
+}
+
+#title h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3vw;
+}
+
+#loginboard {
+    padding: 1%;
+    border: solid;
+    border-color: red;
+    border-width: 1px;
+    border-radius: 15px;
+    margin: 0.5% 0% 0.5% 0%;
+}
+
+#instructions h2 {
+    font-size: 1.5vw;
+}
+
+#player {
+    text-align: center;
+
+}
+
+#loginimage {
+    padding: 1%;
+    margin: 0.5% 0% 0.5% 0%;
+    object-fit: cover;
+}
+
+#gamefooter h2 {
+    font-size: 1vw;
+}
+
+
+
+/* Media queries */
+
+/* if screen width is no more than 980px then apply these below */
+@media screen and (min-width: 769px) and (max-width: 980px) {
+    #title h1 {
+        font-size: 3vw;
+    }
+
+    #instructions h2 {
+        font-size: 2vw;
+    }
+
+    #gamefooter h2 {
+        font-size: 1vw;
+    }
+}
+
+/* if screen width is no more than 768px then apply these below */
+@media screen and (min-width: 641px) and (max-width: 768px) {
+    #title h1 {
+        font-size: 3vw;
+    }
+    #instructions h2 {
+        font-size: 2vw;
+    }
+    #gamefooter h2 {
+        font-size: 2vw;
+    }
+}
+  
+/* if screen width is no more than 640px then apply these below */
+@media screen and (max-width: 640px) {
+    #title h1 {
+        font-size: 3vw;
+    }
+
+    #instructions h2 {
+        font-size: 2vw;
+    }
+
+    #gamefooter h2 {
+        font-size: 2vw;
+    }
+}  
