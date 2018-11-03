@@ -71,7 +71,13 @@
     font-size: 1vw;
 }
 
-
+/* Select Screen */
+#character-tbl {
+    max-height: 500px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
 
 /* Media queries */
 

@@ -3,7 +3,8 @@ $(document).ready(function () {
     /******************* */
     //* Global Varialbes */
     /******************* */
-    var tribe = "hero"; // this belongs in the active player object 
+    var tribe = "hero";                  // this belongs in the active player object 
+    var activeCharChoiceElem = null;     // keep track of the selected character to highlight
 
     /******************* */
     /*  Helper functions */
@@ -82,6 +83,8 @@ $(document).ready(function () {
     /* Click Handlers */
     /**************** */
 
+    //-----------------------------------
+    // tribe button(s) event handler - handles updating the list of heros or villains based on the choice clicked
     $(".tribe-btn").on("click", function (event) {
 
         event.preventDefault();
@@ -95,15 +98,29 @@ $(document).ready(function () {
         // Really this should be hooked off the active player tribev
         setTribeChoice(choice);
 
-        // Refresh the list
+        // Refresh the selection list
         updateCharacterList();
     });
 
+    //-----------------------------------
+    // character choice click event () - updates the bio picture based on the selected character in the list
+    //-----------------------------------
     $(document).on("click", ".character-choice", function(event) {
+
+        // Prevent the form from refreshing the entire screen  
         event.preventDefault();
+
+        // clear previous active choices
+        if (activeCharChoiceElem)
+            activeCharChoiceElem.removeClass("active");  
+
+        // save the active character selection and make it active (highlighted)
+        activeCharChoiceElem = $(this);
+        activeCharChoiceElem.addClass("active");
 
         // Get the choice from the button selected
         var choice = $(this).attr("data-name");
+
         console.log("character-choice event() - ", choice);
 
         // Update the biography pic & data

@@ -56,6 +56,12 @@ function performMarvelSearch(character) {
         // Replace the displayed card with the new movie
         $("#char-img").empty();
         $("#char-img").append($("<p>").text(name));
-        $("#char-img").append($("<img>").attr("src",thumbnail).attr("height","150px"));
+
+        var img = $("<img>");
+        img.attr("src", thumbnail);
+        img.attr("height","300px");
+        img.attr("alt", name);
+        img.addClass("rounded");
+        $("#char-img").append(img);
     });
 }
