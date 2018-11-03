@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 
     <title>Hot or Not: Marvel vs DC </title>
 
@@ -29,8 +29,9 @@
     <script src="assets/javascript/firebase.js"></script>
     <script src="assets/javascript/md5.js"></script>
     <script src="assets/javascript/marvel.js"></script>
-    <script src="assets/javascript/dc.js"></script>
     <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/select.js"></script>
+
 
     <!-- Added css-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -57,11 +58,6 @@
 
                 <div class="row" id="loginSelectList">
                     <ul class="list-group" id="character-tbl">
-                        <li class="list-group-item">Iron Man</li>
-                        <li class="list-group-item active">Hulk</li>
-                        <li class="list-group-item">Spider-Man</li>
-                        <li class="list-group-item">Black Widow</li>
-                        <li class="list-group-item">Rogue</li>
                     </ul>
                 </div>
 
@@ -75,8 +71,8 @@
 
                 <div id="tribe-selector">
                     <form>
-                        <input type="radio" name="tribe" value="hero">Hero<br>
-                        <input type="radio" name="tribe" value="villain">Villain<br>
+                        <button id="hero-btn" data-tribe="hero" class="tribe-btn">Hero</button>
+                        <button id="villain-btn" data-tribe="villain" class="tribe-btn">Villain</button>
                     </form>
                 </div>
             </div>
@@ -87,10 +83,7 @@
         Superman
     </div>
 
-    <script type="text/javascript">
-        // Test Calls
-        performMarvelSearch("Hulk");
-    </script>
+</script>
 
 </body>
 
