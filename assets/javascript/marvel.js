@@ -54,8 +54,8 @@ function performMarvelSearch(character) {
         thumbnail += "." + response.data.results[0].thumbnail.extension;
 
         // Replace the displayed card with the new movie
-        $("#marvel").empty();
-        $("#marvel").append($("<p>").text(name));
-        $("#marvel").append($("<img>").attr("src",thumbnail).attr("height","150px"));
+        $("#char-img").empty();
+        $("#char-img").append($("<p>").text(name));
+        $("#char-img").append($("<img>").attr("src",thumbnail).attr("height","150px"));
     });
 }
