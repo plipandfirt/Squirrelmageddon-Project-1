@@ -32,7 +32,6 @@
     <script src="assets/javascript/game.js"></script>
     <script src="assets/javascript/select.js"></script>
 
-
     <!-- Added css-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -63,18 +62,23 @@
 
             </div>
 
-            <!-- </div> -->
             <div class="col-lg-6 bg-secondary text-red border-warning text-center" id="loginTribe">
-                <div id="char-img">
+                <div id="char-img" class="m-2">
                     Bio pic
                 </div>
 
                 <div id="tribe-selector">
                     <form>
-                        <button id="hero-btn" data-tribe="hero" class="tribe-btn">Hero</button>
-                        <button id="villain-btn" data-tribe="villain" class="tribe-btn">Villain</button>
+                        <button id="hero-btn" data-tribe="hero" class="btn btn-light tribe-btn">Hero</button>
+                        <button id="villain-btn" data-tribe="villain" class="btn btn-dark tribe-btn">Villain</button>
                     </form>
                 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 offset-lg-6 text-right">
+                <a id="ready-btn" href="round.html" class="btn btn-success">Ready!</a>
             </div>
         </div>
     </div>

@@ -127,8 +127,7 @@ $(document).ready(function () {
         performMarvelSearch(choice);
     });
 
-    /* Update the screen with the latest */
+    // LOAD LOGIC - Update the screen with the latest 
     updateCharacterList();
-    performMarvelSearch("Hulk");
-
+    performMarvelSearch("Deadpool");
 });
