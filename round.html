@@ -57,7 +57,7 @@
         <!-- Characters Row -->
         <div class="row">
             <div class="col-lg-6 text-center">
-                <div id="char-img" class="m-2">
+                <div id="hero-img" class="m-2">
                     Hero pic
                 </div>
             </div>
@@ -72,15 +72,26 @@
         <div class="row">
             <div class="col-lg-6 text-center">
                 <p id="players-title">Players in the game</p>
-                <ul class="list-group" id="players-tbl">
-                </ul>
-        </div>
+                <table class="table table-condensed table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Tribe</th>
+                        </tr>
+                    </thead>
+                    <tbody id="players-tbl">
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
     <script type="text/javascript">
-        var player = JSON.parse(localStorage.getItem('player'));
-        performMarvelSearch(player.character.name );
+        player = JSON.parse(localStorage.getItem('player'));
+
+        // really these should come from firebase
+        displayChampion(player.character.name, "hero-img");
+        displayChampion("Apocalypse", "villain-img");
     </script>
 </body>
 
