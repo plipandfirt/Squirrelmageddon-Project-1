@@ -7,7 +7,6 @@ $(document).ready(function () {
     // Firebase references
     var database = firebase.database();
     var playersRef = database.ref('players');
-    var users = playersRef.child('players');
 
     /********************/
     /* Helper Functions */
