@@ -3,17 +3,27 @@
 
 // Character object
 var character = {
-    name     : String,
-    hero     : false
+    name     : "",
+    tribe    : ""
 } 
 
-var round = {
-    hero : String,            // key field that matchies character.name in a hero array
-    villain : String          // key field that matches character.name in a villain array
+// active player on this application
+var player = {
+    loginName : "",
+    active    : false,
+    character : {}
 }
 
 // Notifications from the Firebase player add events should be pushed here -  array of Player {} objects
 var players = [];
+
+var round = {
+    hero    : "",         // key field that matchies character.name in a hero array
+    villain : ""          // key field that matches character.name in a villain array
+}
+
+// rounds[] - array of round {} objects,  keeps track of results during / between rounds, loads from firebase events
+var rounds = []; 
 
 // 'A' team hero characters loaded from firebase should be pushed here  - array of Character {} objects
 var heroes = [ 
@@ -82,7 +92,3 @@ var villains = [
     "Ultron",
     "Venom (Flash Thompson)" 
     ];
-
-// rounds[] - array of round {} objects,  keeps track of results during / between rounds, loads from firebase events
-var rounds = []; 
-
