@@ -67,6 +67,15 @@
     border-color: red;s
     object-fit: cover;
 }
+
+#loginFooter {
+    width: 100%;
+    background-color: rgb(160, 12, 12);
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+}
+
 #gameFooter h2 {
     font-size: 1vw;
 }
