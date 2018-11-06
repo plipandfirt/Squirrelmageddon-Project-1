@@ -40,6 +40,12 @@
 <body>
     <div class="container">
 
+        <!-- display player banner -->
+        <div class="row">
+            <div class="col-lg-12" id="loggedIn" style="text-align:center;">
+            </div>
+        </div>
+
         <!-- Game title -->
         <div class="row">
             <div class="col-lg-12" id="title">
@@ -90,7 +96,6 @@
 
     <script type="text/javascript">
         player = JSON.parse(localStorage.getItem('player'));
-
         // really these should come from firebase
         displayChampion(player.character.name, "hero-img");
         displayChampion("Apocalypse", "villain-img");

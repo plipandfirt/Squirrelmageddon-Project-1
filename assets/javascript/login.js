@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
     var database = firebase.database();
     var users = database.ref().child('players');
     var playersRef = database.ref('players');
@@ -14,10 +13,16 @@ $(document).ready(function () {
     });
     console.log(loggedIn);
     
+    // JBOND
+    // CODE BELOW WAS REMOVED AND THE BLOCK BELOW IT ADDED
+    // CHECK WITH CHRIS TO SEE IF THIS IS EXPECTED TO BE REUSED ON NEXT GAME
     // if a player exists in local storage - display them in the #loggedIn div
-    if (localStorage.getItem("player")){
-        $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + localStorage.getItem("player") + "</strong>" + "</h5>");
-    }
+    // if (localStorage.getItem("player")){
+        // $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + localStorage.getItem("player") + "</strong>" + "</h5>");
+    // }
+
+    // start out displaying a message for the user to add their player name
+    $("#loggedIn").html("<h5>Enter your Player name to get started.");
 
     // Runs when user clicks submit button
     $("#submitButton").click(function () {
@@ -86,9 +91,5 @@ $(document).ready(function () {
         localStorage.setItem("player", username)
         $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + localStorage.getItem("player") + "</strong>" + "</h5>");
     }
-
-
-
-
 
 }); //end of document ready
