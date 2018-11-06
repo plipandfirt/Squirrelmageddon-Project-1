@@ -13,8 +13,11 @@ $(document).ready(function () {
         loggedIn.push(getUsers);
     });
     console.log(loggedIn);
-
-
+    
+    // if a player exists in local storage - display them in the #loggedIn div
+    if (localStorage.getItem("player")){
+        $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + localStorage.getItem("player") + "</strong>" + "</h5>");
+    }
 
     // Runs when user clicks submit button
     $("#submitButton").click(function () {
@@ -25,6 +28,7 @@ $(document).ready(function () {
             $("#submitButton").hide()
             $("#player").html("Thank you " + '<strong>' + username + '</strong>' + " for logging into Super Hero Hot or Not!")
             userlog();
+            setUser();
             setTimeout(function(){selectPage()}, 3000);
         }
         else if ($("#loginName").val().trim() === "") {
@@ -47,6 +51,7 @@ $(document).ready(function () {
                 $("#submitButton").hide()
                 $("#player").html("Thank you " + '<strong>' + username + '</strong>' + " for logging into Super Hero Hot or Not!")
                 userlog();
+                setUser();
                 setTimeout(function(){selectPage()}, 3000);
             }
             else if ($("#loginName").val().trim() === "") {
@@ -76,6 +81,11 @@ $(document).ready(function () {
         document.location.href = 'Select.html'
     }
 
+    function setUser(){
+        localStorage.clear()
+        localStorage.setItem("player", username)
+        $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + localStorage.getItem("player") + "</strong>" + "</h5>");
+    }
 
 
 
