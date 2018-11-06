@@ -38,14 +38,14 @@ function logPlayerChoices() {
 
     // Log to database so other players are aware of our choice
     player.time = moment().format("X");
-    player.active = true;
+    player.status = "active";
 
-    // Log to local storage -- use for screen refreshes and downstream pages
-    // JBOND - the line below ?overwrites localstorage player loginName 
-    // localStorage.setItem('player', JSON.stringify(player));
+    // Log to session storage -- use for screen refreshes and downstream pages
+    sessionStorage.setItem('player', JSON.stringify(player));
 
     // Log to database
-    playersRef.push(player);
+    // TBD - this needs to be an update,  not a push!
+//    playersRef.push(player);
 }
 
 //-----------------------------
@@ -181,7 +181,7 @@ $(document).ready(function () {
         if (activeCharChoiceElem)
             player.character.name = activeCharChoiceElem.attr("data-name");
         else
-            player.character.name = "Hulk";
+            player.character.name = "";
 
         // write the choices to firebase to update the other users players[] array
         logPlayerChoices();
@@ -191,14 +191,17 @@ $(document).ready(function () {
         window.location.replace("round.html");
     });
 
+    //----------------------------------
+    // playerRef.child_added() -  firebase event to add a new player to the global array of players
+    //----------------------------------
     playersRef.on("child_added", function (data, prevChildKey) {
 
         var player = {};
         var newPlayer = data.val();
         player.loginName =  newPlayer.loginName;
-        player.active = newPlayer.active;
-        // player.character.tribe = newPlayer.character.tribe;
-        // player.character.name = newPlayer.character.name; 
+        player.status = newPlayer.status;
+        player.character.tribe = newPlayer.character.tribe;
+        player.character.name = newPlayer.character.name; 
         players.push(player);
 
         console.log("---- player added to players array ----");
@@ -211,14 +214,16 @@ $(document).ready(function () {
     // SCREEN LOAD LOGIC - Update the screen with the latest 
     /////////////////////////
 
-    // JBOND - UNSURE OF LINE BELOW
-    player.loginName = "Mike"; // TBD - get this from the login screen
+    // if a player exists in session storage - display them in the #loggedIn div
+    if (sessionStorage.getItem("player")){
+        player = JSON.parse(sessionStorage.getItem('player'));
 
-    // if a player exists in local storage - display them in the #loggedIn div
-    if (localStorage.getItem("player")){
-        $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + localStorage.getItem("player") + "</strong>" + "</h5>");
+        $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + player.loginName + "</strong>" + "</h5>");
     }
 
+    // Load the table with possible choices  -- TBD - use the player tribe from local storage if available
     updateCharacterList();
+
+    // Put up a bio image -- TBD - grab this from player storage if available
     performMarvelSearch("Deadpool");
 });

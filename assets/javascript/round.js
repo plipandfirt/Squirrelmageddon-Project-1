@@ -50,7 +50,7 @@ function loadPlayerList(tblElem) {
         (i < players.length); i++) {
 
         // ONLY DISPLAY ACTIVELY LOGGED IN PLAYERS!!
-        if (player.active == true) {
+        if (player.status === "active") {
 
             // Append the player's name 
             var tr = $("<tr>");
@@ -68,7 +68,7 @@ function loadPlayerList(tblElem) {
             tr.append(td);
 
             // Append the player's status -- ready to play or not  (active only means logged in currently)
-            var status = players[i].active == true ? "pending" : "ready";
+            var status = players[i].status == "active" ? "pending" : "ready";
             td = $("<td>");
             $(td).addClass("player-item");
             $(td).text(status);
@@ -117,17 +117,21 @@ function displayChampion(character, field) {
     });
 }
 
+/******************/
+/* Event Handlers */
+/******************/
+
+//---------------------------
+//  document.ready()  -  global event handler on page load 
+//---------------------------
 $(document).ready(function () {
 
-    // if a player exists in local storage - display them in the #loggedIn div
-    if (localStorage.getItem("player")){
-        console.log();
-        $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + localStorage.getItem("player") + "</strong>" + "</h5>");
+    // if a player exists in session storage - display them in the #loggedIn div
+    if (sessionStorage.getItem("player")){
+        player = JSON.parse(sessionStorage.getItem('player'));
+        console.log(player);
+        $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + player.loginName + "</strong>" + "</h5>");
     }
-
-    /******************/
-    /* Event Handlers */
-    /******************/
 
     //-----------------------------
     // on player added event() -- updates the player array with active players
@@ -142,7 +146,7 @@ $(document).ready(function () {
         }; // default data
         var newPlayer = data.val();
         player.loginName = newPlayer.loginName;
-        player.active = newPlayer.active;
+        player.status = newPlayer.status;
 
         // Make sure we have some default data if none is provided
         if (newPlayer.character) {
