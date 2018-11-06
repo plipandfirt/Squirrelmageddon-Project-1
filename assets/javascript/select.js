@@ -41,7 +41,8 @@ function logPlayerChoices() {
     player.active = true;
 
     // Log to local storage -- use for screen refreshes and downstream pages
-    localStorage.setItem('player', JSON.stringify(player));
+    // JBOND - the line below ?overwrites localstorage player loginName 
+    // localStorage.setItem('player', JSON.stringify(player));
 
     // Log to database
     playersRef.push(player);
@@ -209,7 +210,15 @@ $(document).ready(function () {
     /////////////////////////
     // SCREEN LOAD LOGIC - Update the screen with the latest 
     /////////////////////////
+
+    // JBOND - UNSURE OF LINE BELOW
     player.loginName = "Mike"; // TBD - get this from the login screen
+
+    // if a player exists in local storage - display them in the #loggedIn div
+    if (localStorage.getItem("player")){
+        $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + localStorage.getItem("player") + "</strong>" + "</h5>");
+    }
+
     updateCharacterList();
     performMarvelSearch("Deadpool");
 });
