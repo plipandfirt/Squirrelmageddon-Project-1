@@ -140,6 +140,7 @@ body {
     margin-bottom: 10px;
     overflow:scroll;
     -webkit-overflow-scrolling: touch;
+    color: black;
 }
 
 /* Media queries */
