@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 
     <title>Hot or Not: Marvel vs DC </title>
 
@@ -29,62 +29,59 @@
     <script src="assets/javascript/firebase.js"></script>
     <script src="assets/javascript/md5.js"></script>
     <script src="assets/javascript/marvel.js"></script>
-    <script src="assets/javascript/dc.js"></script>
     <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/select.js"></script>
+
+    <!-- Added css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
 <body>
-    <div class="container-fluid">
-        <!-- title row -->
+    <div class="container">
+
+        <!-- display game title -->
         <div class="row">
-            <div class="col-md-12">
-                <div class="card mb-4">
-                    <div class="card-header text-center" style="background-color: rgb(70, 70, 180); color: white">Character
-                        Selector</div>
-                </div>
+            <div class="col-lg-12" id="title">
+                <!-- <h1 class="text-primary">Hot or Not: Superhero Edition!</h1>-->
+                <img src="assets/images/marvel-title3.png" class="img-fluid img-rounded mx-auto d-block" alt="Game Title">
             </div>
         </div>
 
         <!-- selector row -->
         <div class="row">
-            <div class="col-md-6 bg-light">
-                <div class="card mb-4">
-                    <div class="card-header" style="background-color: rgb(70, 70, 180); color: white">Pick your
-                        <span id="hero-villian-tag">champion</span>:</div>
+            <div class="col-lg-6 text-center">
+                <div id="loginSelect">
+                    <h1>Pick your <span id="hero-villian-tag">hero</span></h1>
+                </div>
+
+                <div id="loginSelectList">
                     <ul class="list-group" id="character-tbl">
-                        <li class="list-group-item">Iron Man</li>
-                        <li class="list-group-item active">Hulk</li>
-                        <li class="list-group-item">Spider-Man</li>
-                        <li class="list-group-item">Black Widow</li>
-                        <li class="list-group-item">Rogue</li>
                     </ul>
                 </div>
+
             </div>
-            <div class="col-md-6 bg-secondary text-white border">
-                <div id="char-img" style="height:150px;">
+
+            <div class="col-lg-6 bg-secondary text-red border-warning text-center" id="loginTribe">
+                <div id="char-img" class="m-2">
                     Bio pic
                 </div>
 
                 <div id="tribe-selector">
                     <form>
-                        <input type="radio" name="tribe" value="hero">Hero<br>
-                        <input type="radio" name="tribe" value="villain">Villain<br>
+                        <button id="hero-btn" data-tribe="hero" class="btn btn-light tribe-btn">Hero</button>
+                        <button id="villain-btn" data-tribe="villain" class="btn btn-dark tribe-btn">Villain</button>
                     </form>
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-lg-6 offset-lg-6 text-right">
+                <a id="ready-btn" href="round.html" class="btn btn-success">Ready!</a>
+            </div>
+        </div>
     </div>
-
-    <div id="marvel">
-        Superman
-    </div>
-
-    <script type="text/javascript">
-        // Test Calls
-        performMarvelSearch("Hulk");
-    </script>
-
 </body>
 
 </html>
