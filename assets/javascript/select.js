@@ -196,8 +196,9 @@ $(document).ready(function () {
     //----------------------------------
     playersRef.on("child_added", function (data, prevChildKey) {
 
-        var player = {};
         var newPlayer = data.val();
+        var player = {};        
+        player.character = {};
         player.loginName =  newPlayer.loginName;
         player.status = newPlayer.status;
         player.character.tribe = newPlayer.character.tribe;
