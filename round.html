@@ -95,7 +95,7 @@
     </div>
 
     <script type="text/javascript">
-        player = JSON.parse(localStorage.getItem('player'));
+        player = JSON.parse(sessionStorage.getItem('player'));
         // really these should come from firebase
         displayChampion(player.character.name, "hero-img");
         displayChampion("Apocalypse", "villain-img");
