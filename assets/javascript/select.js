@@ -2,6 +2,21 @@
 //* Global Varialbes */
 /******************* */
 
+/******************* */
+//* Popper Variable - https://popper.js.org/ */
+/******************* */
+// var popper = new Popper(referenceElement, onBottomPopper, {
+//     placement: 'bottom',
+//     modifiers: {
+//         flip: {
+//             behavior: ['left', 'right', 'top']
+//         },
+//         preventOverflow: {
+//             boundariesElement: container,
+//         },
+//     },
+// });
+
 // Player's screen choices
 var tribe = "hero"; // this belongs in the active player object 
 var activeCharChoiceElem = null; // keep track of the selected character to highlight

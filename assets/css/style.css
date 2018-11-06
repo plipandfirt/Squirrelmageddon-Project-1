@@ -1,8 +1,5 @@
 /* style page for Hot or Not Supuerhero Edition! */
-/* body {
-    background-image: url("../images/bg-1.jpg");
-    background-size: cover;
-} */
+
 .container {
     width: 100%;
 }
@@ -47,8 +44,8 @@
 #loginSelect {
     padding: 1%;
     border: solid;
-    border-color: rgb(199, 5, 5);
-    background-color: rgb(199, 5, 5);
+    border-color: rgb(160, 12, 12);
+    background-color: rgb(160, 12, 12);
     color: white;
     text-align: center;
     border-width: 1px;
@@ -59,20 +56,17 @@
 #loginSelectList {
     padding: 1%;
     border: solid;
-    background-color: gray;
     border-color: gray;
+    background-color: gray;
     border-width: 1px;
     border-radius: 15px;
     margin: 0.5% 0% 0.5% 0%;
 }
 #loginTribe {
     padding: 1%;
-    border: solid;
-    border-color: gray;
-    border-width: 1px;
     margin: 0.5% 0% 0.5% 0%;
-    font-size: 1.5vw;
     border-radius: 15px;
+    border-color: rgb(160, 12, 12);
     object-fit: cover;
 }
 
