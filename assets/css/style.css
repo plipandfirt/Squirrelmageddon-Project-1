@@ -1,7 +1,11 @@
-/* style page for Hot or Not Supuerhero Edition! */
-
+/* style page for Hot or Not Superhero Edition! */
+body {
+    background-image: url("../images/bg-1.jpg");
+    background-size: cover;
+}
 .container {
     width: 100%;
+    color: white;
 }
 
 #title {
@@ -19,15 +23,20 @@
 
 #loginBoard {
     padding: 1%;
-    border: solid;
-    border-color: red;
-    border-width: 1px;
-    border-radius: 15px;
-    margin: 0.5% 0% 0.5% 0%;
 }
 
 #instructions h2 {
-    font-size: 1.5vw;
+    font-size: 1.75vw;
+    text-align: center;
+    line-height: 60px;
+    color: black;
+    background-color: whitesmoke;
+    padding: 1%;
+    border: solid;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 15px;
+    margin: 0.5% 0% 0.5% 0%;
 }
 
 #player {
@@ -62,11 +71,15 @@
     border-radius: 15px;
     margin: 0.5% 0% 0.5% 0%;
 }
+
 #loginTribe {
     padding: 1%;
-    margin: 0.5% 0% 0.5% 0%;
+    border: solid;
+    border-color: gray;
+    border-width: 1px;
     border-radius: 15px;
-    border-color: rgb(160, 12, 12);
+    margin: 0.5% 0% 0.5% 0%;
+    font-size: 3vw;
     object-fit: cover;
 }
 
@@ -75,19 +88,50 @@
     background-color: rgb(160, 12, 12);
     color: white;
     text-align: center;
+    padding: 1%;
+    border: solid;
+    border-color: rgb(160, 12, 12);
+    border-width: 1px;
     border-radius: 15px;
+    margin: 0.5% 0% 0.5% 0%;
+}
+
+#players-title {
+    padding: 1%;
+    border: solid;
+    border-color: gray;
+    background-color: gray;
+    border-width: 1px;
+    border-radius: 15px;
+    margin: 0.5% 0% 0.5% 0%;
+}
+
+#round-num {
+    padding: 1%;
+    border: solid;
+    border-color: gray;
+    background-color: gray;
+    border-width: 1px;
+    border-radius: 15px;
+    margin: 0.5% 0% 0.5% 0%;
 }
 
 #loginFooter {
     width: 100%;
     background-color: rgb(160, 12, 12);
+    border-color: rgb(160, 12, 12);
     color: white;
     text-align: center;
     border-radius: 15px;
+    padding: 1%;
+    margin: 0.5% 0% 0.5% 0%;
 }
 
 #gameFooter h2 {
     font-size: 1vw;
+    color: whitesmoke;
+    text-align: center;
+    margin: 0.5% 0% 0.5% 0%;
 }
 
 /* Select Screen */
