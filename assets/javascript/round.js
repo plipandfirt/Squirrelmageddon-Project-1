@@ -5,10 +5,28 @@
 // Firebase references
 var database = firebase.database();
 var playersRef = database.ref('players');
+var gameRef = database.ref("games");
 
 /********************/
 /* Helper Functions */
 /********************/
+
+function getInGame() {
+
+    // Creates key based on assigned player number
+    playerRef = database.ref("/players/" + playerNum);
+
+    // Creates player object. 'choice' is unnecessary here, but I left it in to be as complete as possible
+    playerRef.set({
+        name: username,
+        wins: 0,
+        losses: 0,
+        choice: null
+    });
+
+    // On disconnect remove this user's player object
+    playerRef.onDisconnect().remove();
+}
 
 //--------------------------------
 // loadPlayerList(tblElem) - populates the screen element with a list of players from the global player array
@@ -28,7 +46,8 @@ var playersRef = database.ref('players');
 function loadPlayerList(tblElem) {
 
     tblElem.empty();
-    for (var i = 0; (i < players.length); i++) {
+    for (var i = 0;
+        (i < players.length); i++) {
 
         // ONLY DISPLAY ACTIVELY LOGGED IN PLAYERS!!
         if (player.active == true) {
@@ -38,14 +57,14 @@ function loadPlayerList(tblElem) {
             var td = $("<td>");
             $(td).addClass("player-item");
             $(td).text(players[i].loginName);
-            $(td).attr("data--name", players[i].loginName);
+            $(td).attr("data-name", players[i].loginName);
             tr.append(td);
 
             // Append the player's tribe
             td = $("<td>");
             $(td).addClass("player-item");
             $(td).text(players[i].character.tribe);
-            $(td).attr("data--tribe", players[i].character.tribe);
+            $(td).attr("data-tribe", players[i].character.tribe);
             tr.append(td);
 
             tblElem.append(tr);
@@ -129,5 +148,33 @@ $(document).ready(function () {
 
         var tableElem = $("#players-tbl");
         loadPlayerList(tableElem);
+    });
+
+
+    //------------------------------
+    // Player ref onValue() event - gets the full complement of players in the game and sorts them by heros and villains
+    //------------------------------
+    playersRef.on("value", function (snapshot) {
+
+        // length of the 'players' array
+        var currentPlayers = snapshot.numChildren();
+        console.log("on value Players() - numChildren = ", currentPlayers);
+    });
+
+
+    //------------------------------
+    // Hero OnClick() event - user selected a Hero,  update the game record and pass the turn to the next player
+    //------------------------------
+    $(document).on("click", "#hero-img", function(event) {
+        $(this).addClass("border border-success");
+        $("#villain-img").removeClass("border border-success");
+    });
+
+    //------------------------------
+    // Villain OnClick() event - user selected a Hero,  update the game record and pass the turn to the next player
+    //------------------------------
+    $(document).on("click", "#villain-img", function(event) {
+        $(this).addClass("border border-success");
+        $("#hero-img").removeClass("border border-success");
     });
 });

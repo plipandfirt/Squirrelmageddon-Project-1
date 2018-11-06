@@ -1,5 +1,5 @@
 # Squirrelmageddon-Project-1 - Marvel Hot or Not
-s
+
 Project Description /Final Sketch:  Hot or Not Game based on Marvel Universe of Characters – Players choose a character from the universe of Marvel Characters.  Every character you look up will have a brief description of things about them, image, gifs, etc.  Voting will be done with multiple players (class).  Voting will be single elimination and go to the last character standing!  Final winning character will be displayed at an ending screen, more information about this character, what class members picked the winning character & also a leaderboard with winners logged?  
 
 APIs to be used: Marvel API, OMDB API, Stretch goal – DC API (if something exists that is suitable)  
@@ -12,9 +12,9 @@ For anyone living in the New Hampshire area in the fall of 2018, you will know w
 For our team, the persisence of the squirrel in their single-minded quest is the inspiration for this team. Here's to you Scrat, Rocket J. Squirrel (Rocky the Flying Squirrel), Sandy Cheeks and the rest. We will adopt your focus and ensure a quality sofware delivery of our imagining -- but yet always remember to look both ways before crossing the street!
 
 ## Rough Breakdown of Tasks:  
-1.)    Character selection screen – search character by name / movie / comic / or Random button to generate a random marvel character
-2.)    Voting selection screen – match up two random character – it is voted and the one with most votes is retained in a new array, loser is eliminated.  This continues until there is only one character
-3.)    Winner screen – more information about winning character, who selected this character, and a leaderboard possibly.
+1.)    Character selection screen – search character by name / movie / comic / or Random button to generate a random marvel character  
+2.)    Voting selection screen – match up two random character – it is voted and the one with most votes is retained in a new array, loser is eliminated.  This continues until there is only one character  
+3.)    Winner screen – more information about winning character, who selected this character, and a leaderboard possibly.  
 
 ## Getting Started
 To get started, copy the program to a clean directory and run "index.html" in your browser.  The program is ready to start automatically.  It will present you with a lightweight login screen to ask you for a name to use during the game.  
@@ -54,10 +54,10 @@ Bootstrap 4.1.2 - Bootstrap library
 Moment JS 2.22.2 - Date/Time library  
    
 ## Authors
-Laurie Anderson - plipandfirt
+Laurie Anderson - plipandfirt  
 Jeff Bond - mycatbign  
-Michael Galarneau - Five0fFour
-Chris Gauthier - chrsgauthier5
+Michael Galarneau - Five0fFour  
+Chris Gauthier - chrsgauthier5  
   
 ## Acknowledgements
 Marvel Developer Portal & API:  http://developer.marvel.com  
