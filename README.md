@@ -50,8 +50,9 @@ Responsiveness - screens will react to limited viewports and collapose into scro
 
 ## Built With
 jQuery 3.3.1 - JavaScript library   
-Bootstrap 4.1.2 - Bootstrap library  
+Bootstrap 4.0.0 - Bootstrap library  
 Moment JS 2.22.2 - Date/Time library  
+Popper.js 1.12.9 - Popper Library
    
 ## Authors
 Laurie Anderson - plipandfirt  
