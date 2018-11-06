@@ -68,6 +68,14 @@
     object-fit: cover;
 }
 
+#loggedIn {
+    width: 100%;
+    background-color: rgb(160, 12, 12);
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+}
+
 #loginFooter {
     width: 100%;
     background-color: rgb(160, 12, 12);

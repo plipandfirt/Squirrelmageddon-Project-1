@@ -111,6 +111,12 @@ function displayChampion(character, field) {
 
 $(document).ready(function () {
 
+    // if a player exists in local storage - display them in the #loggedIn div
+    if (localStorage.getItem("player")){
+        console.log();
+        $("#loggedIn").html("<h5>Currently logged in as: " + "<strong>" + localStorage.getItem("player") + "</strong>" + "</h5>");
+    }
+
     /******************/
     /* Event Handlers */
     /******************/
@@ -177,4 +183,6 @@ $(document).ready(function () {
         $(this).addClass("border border-success");
         $("#hero-img").removeClass("border border-success");
     });
+
+
 });
