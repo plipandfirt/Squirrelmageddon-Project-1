@@ -7,14 +7,14 @@ APIs to be used: Marvel API, OMDB API, Stretch goal – DC API (if something exi
 Alt APIs: Star Trek vs Star Wars (instead of Marvel vs DC)  
 
 ## Why Squirrelmaggedon?  
-For anyone living in the New Hampshire area in the fall of 2018, you will know what we are referring to. The number of tragic squirrel roadkill during October was staggering and tragic.  Those poor little critters were flattened everywhere, on the highways and the by-ways. It only seemed fitting to give them a tribute as they lived their final hours looking for that ever elusive acorn. 
+For anyone living in the New Hampshire area in the fall of 2018, you will know what we are referring to. The sheer number of squirrel roadkill during October was staggering and tragic.  Those poor little critters were flattened everywhere, both on the highways and the by-ways. It only seemed fitting to give them a tribute as they lived their final hours looking for that ever elusive acorn. 
 
-For our team, the persisence of the squirrel in their single-minded quest is the inspiration for this team. Here's to you Scrat, Rocket J. Squirrel (Rocky the Flying Squirrel), Sandy Cheeks and the rest. We will adopt your focus and ensure a quality sofware delivery of our imagining -- but yet always remember to look both ways before crossing the street!
+For our team, the persisence of the squirrel in their single-minded quest is the inspiration for this team. Here's to you Scrat, Rocket J. Squirrel (Rocky the Flying Squirrel), Sandy Cheeks and the rest. We will adopt your focus and ensure a quality sofware delivery of our imagining -- but yet always remembering to look both ways before crossing the street!
 
 ## Rough Breakdown of Tasks:  
-1.)    Character selection screen – search character by name / movie / comic / or Random button to generate a random marvel character  
-2.)    Voting selection screen – match up two random character – it is voted and the one with most votes is retained in a new array, loser is eliminated.  This continues until there is only one character  
-3.)    Winner screen – more information about winning character, who selected this character, and a leaderboard possibly.  
+1) Character selection screen – search character by name / movie / comic / or Random button to generate a random marvel character  
+2) Voting selection screen – match up two random character – it is voted and the one with most votes is retained in a new array, loser is eliminated.  This continues until there is only one character  
+3) Winner screen – more information about winning character, who selected this character, and a leaderboard possibly.  
 
 ## Getting Started
 To get started, copy the program to a clean directory and run "index.html" in your browser.  The program is ready to start automatically.  It will present you with a lightweight login screen to ask you for a name to use during the game.  
@@ -34,25 +34,25 @@ GitBash installed locally
         It should display the game login screen and prompt you for your name  
   
 ## Developer notes
-index.html:  main entry point and user interface, minimal code is here, the dynamicism is all in the app.js
-login.js -- captures the player's name at game start, called by index.html
-select.js - allows the player to choose a tribve (hero / villain) and a character champion
-round.js - displays the game results in realtime
-marvel.js - API calls to developer.marvel.com to get character info and pics
-firebase.js - google database configuration for persistent storage
-game.js - master game objects used for consistency across pages, defines character choices for select screen
-md5.js - hash function required to call the marvel api 
-dc.js - wikipedia API to get the DC characters since DC doesn't have an API (yet?)
+index.html:  main entry point and user interface, minimal code is here, the dynamicism is all in the app.js  
+login.js -- captures the player's name at game start, called by index.html  
+select.js - allows the player to choose a tribve (hero / villain) and a character champion  
+round.js - displays the game results in realtime  
+marvel.js - API calls to developer.marvel.com to get character info and pics  
+firebase.js - google database configuration for persistent storage  
+game.js - master game objects used for consistency across pages, defines character choices for select screen  
+md5.js - hash function required to call the marvel api   
+dc.js - wikipedia API to get the DC characters since DC doesn't have an API (yet?)  
 
 Firebase is used to manage all the multi-player state  
 LocalStorage is used to track the current player's credentials  
-Responsiveness - screens will react to limited viewports and collapose into scrollable columns
-
+Responsiveness - screens will react to limited viewports and collapose into scrollable columns  
+  
 ## Built With
 jQuery 3.3.1 - JavaScript library   
 Bootstrap 4.0.0 - Bootstrap library  
 Moment JS 2.22.2 - Date/Time library  
-Popper.js 1.12.9 - Popper Library
+Popper.js 1.12.9 - Popper Library  
    
 ## Authors
 Laurie Anderson - plipandfirt  
