@@ -67,6 +67,14 @@ function loadPlayerList(tblElem) {
             $(td).attr("data-tribe", players[i].character.tribe);
             tr.append(td);
 
+            // Append the player's status -- ready to play or not  (active only means logged in currently)
+            var status = players[i].active == true ? "pending" : "ready";
+            td = $("<td>");
+            $(td).addClass("player-item");
+            $(td).text(status);
+            $(td).attr("data-status", status);
+            tr.append(td);
+
             tblElem.append(tr);
         }
     }
