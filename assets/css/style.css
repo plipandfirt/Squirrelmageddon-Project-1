@@ -3,6 +3,7 @@ body {
     background-image: url("../images/bg-1.jpg");
     background-size: cover;
 }
+
 .container {
     width: 100%;
     color: white;
@@ -99,11 +100,24 @@ body {
 #players-title {
     padding: 1%;
     border: solid;
-    border-color: gray;
-    background-color: gray;
+    border-color: rgb(160, 12, 12);
+    background-color: rgb(160, 12, 12);
     border-width: 1px;
     border-radius: 15px;
     margin: 0.5% 0% 0.5% 0%;
+}
+
+#players-tbl-hdr {
+    background-color: whitesmoke;
+    color: black;
+}
+#players-tbl {
+    background-color: whitesmoke;
+    color: black;
+    max-height: 400px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 #round-num {
