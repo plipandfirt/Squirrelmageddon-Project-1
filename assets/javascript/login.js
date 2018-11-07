@@ -58,8 +58,7 @@ $(document).ready(function () {
             $("#loginName").hide();
             $("#submitButton").hide();
             $("#player").html("Thank you " + '<strong>' + username + '</strong>' + " for logging into Super Hero Hot or Not!")
-            userlog();
-            setUser();
+            logUserToFirebase();
             setTimeout(function () {
                 selectPage();
             }, 3000);
@@ -82,8 +81,7 @@ $(document).ready(function () {
                 $("#loginName").hide();
                 $("#submitButton").hide();
                 $("#player").html("Thank you " + '<strong>' + username + '</strong>' + " for logging into Super Hero Hot or Not!")
-                userlog();
-                setUser();
+                logUserToFirebase();
                 setTimeout(function () {
                     selectPage();
                 }, 3000);
@@ -110,9 +108,9 @@ $(document).ready(function () {
     }
 
     //----------------
-    // userLog() - save the login information and push the player to Firebase
+    // logUserToFirebase() - save the login information and push the player to Firebase
     //----------------
-    function userlog() {
+    function logUserToFirebase() {
         // update our global player object
         player.loginName = username;
         player.time = moment().format("X");
@@ -120,9 +118,21 @@ $(document).ready(function () {
         player.character = {};
         player.character.name = "";
         player.character.tribe = "";
+        player.fbkey = "";
 
-        // save to Firebase
-        playersRef.push(player);
+        // save to Firebase but make note of the key!
+        playersRef.push(player)
+        .then((snapshot) => {
+            // save this key in the player object and pass it on to session storage
+            player.fbkey = snapshot.key;
+            console.log("Captured firebase key " + player.fbkey + " for user " + player.loginName);
+
+            // we want to be sure we have the key before we do the session storage write
+            // this block was called asynchronously by firebase so we can't guarantee the timing
+            // outside of this block.
+            setUserToSessionStorage();
+        });
+
     }
 
     //----------------
@@ -133,9 +143,9 @@ $(document).ready(function () {
     }
 
     //----------------
-    // setUser() - save the entered player name to the global plyer object and write it to sessionStorage()
+    // setUserToSessionStorage() - save the entered player name to the global plyer object and write it to sessionStorage()
     //----------------
-    function setUser() {
+    function setUserToSessionStorage() {
         // This should already be saved to the player object, but update the player name in the global object 
         // and write it to sessionStorage()
         player.loginName = username;
