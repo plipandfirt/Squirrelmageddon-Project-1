@@ -157,6 +157,23 @@ body {
     color: black;
 }
 
+
+.modal-content{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+}
+div.modal-header{
+    color: darkslateblue;
+}
+h2.modal-title{
+    text-align: center;
+}
+
+
 /* Media queries */
 
 /* if screen width is no more than 980px then apply these below */
