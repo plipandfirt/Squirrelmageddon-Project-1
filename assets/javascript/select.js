@@ -44,8 +44,13 @@ function logPlayerChoices() {
     sessionStorage.setItem('player', JSON.stringify(player));
 
     // Log to database
-    // TBD - this needs to be an update,  not a push!
-//    playersRef.push(player);
+    savePlayerToFirebase(player);
+}
+
+function savePlayerToFirebase(player) {
+
+    console.log("Saving record to database using the character's stored database key");
+    firebase.database().ref('players/' + player.fbkey).set(player);
 }
 
 //-----------------------------
@@ -135,7 +140,7 @@ $(document).ready(function () {
         // Log our choice
         console.log("Tribe choice event() - ", choice);
 
-        // Really this should be hooked off the active player tribev
+        // Really this should be hooked off the active player tribe
         setTribeChoice(choice);
 
         // Refresh the selection list

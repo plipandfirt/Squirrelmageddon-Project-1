@@ -11,7 +11,8 @@ var character = {
 var player = {
     loginName : "",
     active    : false,
-    character : {}
+    character : { name : "", tribe : ""},
+    fbkey     : ""
 }
 
 // Notifications from the Firebase player add events should be pushed here -  array of Player {} objects
