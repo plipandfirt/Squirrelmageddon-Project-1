@@ -3,6 +3,7 @@
 //                 Note:  it provides two apis,  one for a general query for when the query is generalized and 
 //                        not specific page is in mind.   The second is a direct search to an exact known page.
 //  Source:  https://www.mediawiki.org/wiki/API:Parsing_wikitext                 
+//           https://www.mediawiki.org/wiki/API:Main_page
 
 //---------------------------
 // performWikiSearch(topic) - uses the passed parameter to run a query against the wikipedia API
@@ -46,14 +47,13 @@ function performWikiTopicSearch(topic) {
 //-----------------------------
 function performWikiPageSearch(search) {
 
-    // Second call required ajaz calls to narrow our result to a specific wikipedia page
     $.ajax({
         type: "GET",
         url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + search + "&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
         dataType: "json",
-        noimages: true,    // don't bring back any images
+        noimages: true, // don't bring back any images
         success: function (data) {
 
             var markup = data.parse.text["*"];

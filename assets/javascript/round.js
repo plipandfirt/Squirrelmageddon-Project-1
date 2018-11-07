@@ -209,7 +209,10 @@ $(document).ready(function () {
         
         if (characterName) {
             console.log("on player table click event - running wiki search on " + characterName);
-//            performWikiPageSearch(characterName);
+
+            // Look up the wikipedia alternate spelling of the 
+            // character's name and use that one.
+            performWikiPageSearch(characterName);
         }
     })
 

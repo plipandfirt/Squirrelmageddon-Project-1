@@ -99,8 +99,8 @@ function loadHeroChoices(listElem) {
         var li = $("<li>");
         $(li).addClass("list-group-item");
         $(li).addClass("character-choice");
-        $(li).text(heroes[i]);
-        $(li).attr("data-name", heroes[i]);
+        $(li).text(heroes[i].name);
+        $(li).attr("data-name", heroes[i].name);
         listElem.append(li)
     }
 }
@@ -116,8 +116,8 @@ function loadVillainChoices(listElem) {
         var li = $("<li>");
         $(li).addClass("list-group-item");
         $(li).addClass("character-choice");
-        $(li).text(villains[i]);
-        $(li).attr("data-name", villains[i]);
+        $(li).text(villains[i].name);
+        $(li).attr("data-name", villains[i].name);
         listElem.append(li)
     }
 }
