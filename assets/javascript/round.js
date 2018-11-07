@@ -144,6 +144,7 @@ $(document).ready(function () {
                 name: "Avengers"
             }
         }; // default data
+
         var newPlayer = data.val();
         player.loginName = newPlayer.loginName;
         player.status = newPlayer.status;
