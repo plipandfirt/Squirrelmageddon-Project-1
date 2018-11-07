@@ -63,9 +63,9 @@ $(document).ready(function () {
                 selectPage();
             }, 3000);
         } else if ($("#loginName").val().trim() === "") {
-            alert("Please enter a login name");
+            $('#blankModal').modal("show");
         } else {
-            alert("This username is taken, please choose another one");
+            $("#takenModal").modal("show");
         }
 
     });
@@ -86,9 +86,9 @@ $(document).ready(function () {
                     selectPage();
                 }, 3000);
             } else if ($("#loginName").val().trim() === "") {
-                alert("Please enter a login name");
+                $('#blankModal').modal("show");
             } else {
-                alert("This username is taken, please choose another one");
+                $("#takenModal").modal("show");
             }
         }
     });
