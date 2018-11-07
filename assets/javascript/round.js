@@ -52,8 +52,12 @@ function loadPlayerList(tblElem) {
         // ONLY DISPLAY ACTIVELY LOGGED IN PLAYERS!!
         if (player.status === "active") {
 
-            // Append the player's name 
+            // Add a row for the player, tag it with a characgter value for our hover event
             var tr = $("<tr>");
+            tr.addClass("player-row");
+            tr.attr("data-character", players[i].character.name);
+
+            // Append the player's name 
             var td = $("<td>");
             $(td).addClass("player-item");
             $(td).text(players[i].loginName);
@@ -68,7 +72,7 @@ function loadPlayerList(tblElem) {
             tr.append(td);
 
             // Append the player's status -- ready to play or not  (active only means logged in currently)
-            var status = players[i].status == "active" ? "pending" : "ready";
+            var status = (players[i].status == "active") ? "pending" : "ready";
             td = $("<td>");
             $(td).addClass("player-item");
             $(td).text(status);
@@ -197,5 +201,16 @@ $(document).ready(function () {
         $("#hero-img").removeClass("border border-success");
     });
 
+    //-----------------------------------------
+    // Player Table Row OnClick() event - pop up the wikipedia information on the click of a player's row
+    //-----------------------------------------
+    $(document).on("click", ".player-row", function(event) {
+        var characterName = $(this).attr("data-character");    
+        
+        if (characterName) {
+            console.log("on player table click event - running wiki search on " + characterName);
+//            performWikiPageSearch(characterName);
+        }
+    })
 
 });
