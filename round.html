@@ -12,7 +12,11 @@
 
     <!-- External CSS Stylesheets -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
+    <!-- Popper - must come before Bootstrap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/popper.js"></script>
+    
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
@@ -59,7 +63,7 @@
 
             <!-- DIsplay image and info on the left for responsive purposes-->
             <div class="col-lg-6 text-center">
-                <div id="wiki" class="m-3">
+                <div id="wiki" class="m-3" data-toggle="tooltip" data-placement="left" title="Click picture to learn more about the character">
 <!-- JBOND ISSUE DISPLAYING SELECTED IMAGE-->
 <!-- is #char-img on Select - WAS > #hero-img and #villian-img in former round page-->
                     <!-- Need to replace with the selected image from the last page-->
