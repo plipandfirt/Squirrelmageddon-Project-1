@@ -10,6 +10,14 @@ var activeCharChoiceElem = null; // keep track of the selected character to high
 var database = firebase.database();
 var playersRef = firebase.database().ref("players/");
 var users = playersRef.child('players');
+var parse = JSON.parse(sessionStorage.player);
+var fbkey = parse.fbkey
+/******************* */
+/*  Helper functions */
+/******************* */
+
+// if player disconnect from game or closes window - remove their firebse log//
+firebase.database().ref('players/' + fbkey).onDisconnect().remove();
 
 /******************* */
 /*  Helper functions */

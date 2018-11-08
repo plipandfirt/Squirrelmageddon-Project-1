@@ -21,7 +21,14 @@
 var database = firebase.database();
 var playersRef = database.ref('players');
 var gameRef = database.ref("games");
+var parse = JSON.parse(sessionStorage.player);
+var fbkey = parse.fbkey
+/******************* */
+/*  Helper functions */
+/******************* */
 
+// if player disconnect from game or closes window - remove their firebse log//
+firebase.database().ref('players/' + fbkey).onDisconnect().remove();
 /********************/
 /* Helper Functions */
 /********************/
