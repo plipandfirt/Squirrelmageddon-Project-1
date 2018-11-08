@@ -30,6 +30,7 @@ var round = {
 var rounds = [];
 
 // 'A' team hero characters loaded from firebase should be pushed here  - array of Character {} objects
+//  Requires two different names because Marvel API expects a different name than Wikipedia's API
 // TBD - add firebase load to empty/replace these static values
 var heroes = [{
         name: "Avengers",
@@ -158,6 +159,7 @@ var heroes = [{
 ];
 
 // 'B' team villan characters loaded from firebase should be pushed here - array of Character {} objects
+//  Requires two different names because Marvel API expects a different name than Wikipedia's API
 // TBD - add firebase load to empty/replace these static values
 var villains = [{
         name: "Apocalypse",

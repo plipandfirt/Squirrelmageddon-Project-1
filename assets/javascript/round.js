@@ -71,6 +71,7 @@ function loadPlayerList(tblElem) {
             var tr = $("<tr>");
             tr.addClass("player-row");
             tr.attr("data-character", players[i].character.name);
+            tr.attr("data-tribe", players[i].character.tribe);
 
             // Append the player's name 
             var td = $("<td>");
@@ -221,13 +222,23 @@ $(document).ready(function () {
     //-----------------------------------------
     $(document).on("click", ".player-row", function(event) {
         var characterName = $(this).attr("data-character");    
-        
-        if (characterName) {
+        var characterTribe = $(this).attr("data-tribe");
+
+        if (characterName && characterTribe) {
             console.log("on player table click event - running wiki search on " + characterName);
 
-            // Look up the wikipedia alternate spelling of the 
-            // character's name and use that one.
-            performWikiPageSearch(characterName);
+            // Look up the wikipedia alternate spelling of the hero or villain (aka champion) 
+            var champion = {};
+            if (characterTribe === "hero")
+                champion = heroes.find( character => character.name === characterName );
+            else 
+                champion = villains.find( character => character.name === characterName );
+            
+            // Run a wiki search on the hero or villain using their alternate name
+            if (champion) {
+                performWikiPageSearch(champion.wiki);
+            } 
+
         }
     })
 
