@@ -70,4 +70,4 @@ Chris Gauthier - chrsgauthier5
 Marvel Developer Portal & API:  http://developer.marvel.com  
 Message Digest Algorithm:  http://www.webtoolkit.info/  
 Wikipedia.org:  https://www.mediawiki.org/wiki/API:Parsing_wikitext  
-Favicon:  ??
+Favicon:  Squirrel by R Diepenheim from the Noun Project
