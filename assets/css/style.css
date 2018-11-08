@@ -74,13 +74,14 @@ body {
 }
 
 #loginTribe {
+    color: rgb(160, 12, 12);
     padding: 1%;
     border: solid;
     border-color: gray;
-    border-width: 1px;
+    border-width: 3px;
     border-radius: 15px;
     margin: 0.5% 0% 0.5% 0%;
-    font-size: 3vw;
+    font-size: 2vw;
     object-fit: cover;
 }
 
