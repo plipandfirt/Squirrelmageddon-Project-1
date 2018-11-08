@@ -104,7 +104,6 @@ body {
     border-color: rgb(160, 12, 12);
     background-color: rgb(160, 12, 12);
     border-width: 1px;
-    border-radius: 15px;
     margin: 0.5% 0% 0.5% 0%;
 }
 
@@ -129,6 +128,9 @@ body {
     border-width: 1px;
     border-radius: 15px;
     margin: 0.5% 0% 0.5% 0%;
+}
+#wiki {
+    color: rgb(65, 65, 65);
 }
 
 #loginFooter {
@@ -157,7 +159,6 @@ body {
     -webkit-overflow-scrolling: touch;
     color: black;
 }
-
 
 .modal-content{
     width: 100%;

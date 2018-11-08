@@ -2,6 +2,21 @@
 /* Global Varialbes */
 /********************/
 
+/******************* */
+//* Popper Variable - https://popper.js.org/ */
+/******************* */
+// var popper = new Popper(referenceElement, onBottomPopper, {
+//     placement: 'bottom',
+//     modifiers: {
+//         flip: {
+//             behavior: ['left', 'right', 'top']
+//         },
+//         preventOverflow: {
+//             boundariesElement: container,
+//         },
+//     },
+// });
+
 // Firebase references
 var database = firebase.database();
 var playersRef = database.ref('players');
