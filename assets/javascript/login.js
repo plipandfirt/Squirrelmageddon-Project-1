@@ -61,7 +61,7 @@ $(document).ready(function () {
             logUserToFirebase();
             setTimeout(function () {
                 selectPage();
-            }, 3000);
+            }, 1000);
         } else if ($("#loginName").val().trim() === "") {
             $('#blankModal').modal("show");
         } else {
@@ -84,7 +84,7 @@ $(document).ready(function () {
                 logUserToFirebase();
                 setTimeout(function () {
                     selectPage();
-                }, 3000);
+                }, 1000);
             } else if ($("#loginName").val().trim() === "") {
                 $('#blankModal').modal("show");
             } else {
