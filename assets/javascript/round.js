@@ -5,17 +5,20 @@
 /******************* */
 //* Popper Variable - https://popper.js.org/ */
 /******************* */
-// var popper = new Popper(referenceElement, onBottomPopper, {
-//     placement: 'bottom',
-//     modifiers: {
-//         flip: {
-//             behavior: ['left', 'right', 'top']
-//         },
-//         preventOverflow: {
-//             boundariesElement: container,
-//         },
-//     },
-// });
+$("#players-tbl-hdr").hover(
+    function() {
+        $(this)
+        .popover({
+            trigger: "hover",
+            placement: 'right',
+            content: "Click for Wiki Info",
+        })
+        .popover("show");
+    },
+    function() {
+        $(this).popover("hide");
+    }
+);
 
 // Firebase references
 var database = firebase.database();
