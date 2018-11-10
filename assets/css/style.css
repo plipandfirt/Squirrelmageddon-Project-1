@@ -120,6 +120,11 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+/* change pointer to look clickable when over player table */
+.player-row {
+    cursor:pointer;
+}
+
 #round-num {
     padding: 1%;
     border: solid;
@@ -175,6 +180,10 @@ h2.modal-title{
     text-align: center;
 }
 
+/* change pointer to look clickable when over character table */
+.character-choice {
+    cursor:pointer;
+}
 
 /* Media queries */
 
