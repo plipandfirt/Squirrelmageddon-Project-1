@@ -71,3 +71,6 @@ Marvel Developer Portal & API:  http://developer.marvel.com
 Message Digest Algorithm:  http://www.webtoolkit.info/  
 Wikipedia.org:  https://www.mediawiki.org/wiki/API:Parsing_wikitext  
 Favicon:  Squirrel by R Diepenheim from the Noun Project
+
+## Deployed Site
+https://plipandfirt.github.io/Squirrelmageddon-Project-1/
